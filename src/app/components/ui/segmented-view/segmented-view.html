@@ -1,0 +1,30 @@
+<div
+  #container
+  class="relative inline-flex w-max rounded border border-border bg-panel p-1 text-xs font-bold"
+  role="radiogroup"
+  [attr.aria-label]="ariaLabel()"
+  (keydown)="onKeydown($event)"
+>
+  <div
+    class="segment-indicator pointer-events-none absolute inset-y-1 left-0 rounded bg-primary ease-out"
+    [style.transform]="thumbStyle().transform"
+    [style.width]="thumbStyle().width"
+    [style.transition]="ready() ? 'transform 300ms, width 300ms' : 'none'"
+    [style.opacity]="ready() ? 1 : 0"
+    aria-hidden="true"
+  ></div>
+
+  @for (option of options(); track option.value) {
+    <button
+      #segmentButton
+      class="relative z-10 min-w-10 shrink-0 rounded px-3 py-1 text-center whitespace-nowrap transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary max-[560px]:aria-[checked=false]:hidden"
+      [class.text-white]="option.value === value()"
+      [class.text-muted]="option.value !== value()"
+      [attr.aria-checked]="option.value === value()"
+      [attr.tabindex]="option.value === value() ? 0 : -1"
+      role="radio"
+      type="button"
+      (click)="select(option.value)"
+    >{{ option.label | translate }}</button>
+  }
+</div>
