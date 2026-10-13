@@ -1,7 +1,7 @@
 import { Service, computed, inject, signal } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 
-export type Theme = 'light' | 'dark' | 'sepia';
+export type Theme = 'light' | 'dark';
 export type Locale = 'fr' | 'en';
 
 @Service()
@@ -24,12 +24,20 @@ export class LocalService {
     }
 
     private getInitialTheme(): Theme {
-        const savedTheme = localStorage.getItem('portfolio-theme');
-        if (savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'sepia') {
-            return savedTheme;
+        try {
+            const savedTheme = typeof localStorage !== 'undefined' ? localStorage.getItem('portfolio-theme') : null;
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                return savedTheme;
+            }
+
+            if (typeof window !== 'undefined' && typeof window.matchMedia === 'function') {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+        } catch {
+            return 'light';
         }
 
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        return 'light';
     }
 
 }
