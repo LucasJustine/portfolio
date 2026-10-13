@@ -1,0 +1,33 @@
+<div [class]="gridClass()">
+    @for (item of visibleItems(); track $index) {
+    @if (itemTemplate()) {
+    <ng-container *ngTemplateOutlet="itemTemplate(); context: { $implicit: item, index: $index }" />
+    }
+    }
+</div>
+
+@if (hasMore() && !forceExpanded()) {
+<div class="mt-4 flex justify-center">
+    <button type="button" (click)="toggle()"
+        class="group inline-flex items-center gap-2 rounded border border-border bg-panel px-4 py-2 text-xs font-bold text-foreground transition-all duration-200 hover:border-primary hover:bg-panel-hover hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary cursor-pointer shadow-xs"
+        [attr.aria-expanded]="expanded()">
+        @if (!expanded()) {
+        <span>{{ moreLabel() | translate }}</span>
+        <span
+            class="inline-flex items-center justify-center rounded-full bg-border px-1.5 py-0.2 text-[10px] text-muted transition-colors group-hover:bg-primary/10 group-hover:text-primary">
+            +{{ hiddenCount() }}
+        </span>
+        <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-y-0.5" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+        } @else {
+        <span>{{ lessLabel() | translate }}</span>
+        <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-y-0.5" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+        }
+    </button>
+</div>
+}
