@@ -1,0 +1,26 @@
+<header class="flex items-center justify-between gap-4 border-b border-border py-6">
+    <nav
+        class="hidden items-center gap-6 text-xs font-bold uppercase tracking-[.08em] min-[720px]:flex"
+        [attr.aria-label]="'header.navigationLabel' | translate"
+    >
+        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#a-propos">{{ 'header.about' | translate }}</a>
+        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#projets">{{ 'header.projects' | translate }}</a>
+        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#competences">{{ 'header.skills' | translate }}</a>
+        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#contact">{{ 'header.contact' | translate }}</a>
+    </nav>
+
+    <div class="flex w-full items-center justify-between gap-3 text-xs font-bold min-[720px]:ml-auto min-[720px]:w-auto">
+        <app-segmented-view
+            [options]="localeOptions"
+            [value]="localService.currentLocale()"
+            [ariaLabel]="'header.localeLabel' | translate"
+            (valueChange)="localService.changeLocale($event)"
+        />
+        <app-segmented-view
+            [options]="themeOptions"
+            [value]="localService.currentTheme()"
+            [ariaLabel]="'header.themeLabel' | translate"
+            (valueChange)="localService.changeTheme($event)"
+        />
+    </div>
+</header>

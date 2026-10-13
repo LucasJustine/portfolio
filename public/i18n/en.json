@@ -1,0 +1,14 @@
+{
+  "header": {
+    "homeLabel": "Back to home",
+    "navigationLabel": "Main navigation",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "localeLabel": "Choose language",
+    "themeLabel": "Change theme",
+    "darkTheme": "Dark",
+    "lightTheme": "Light"
+  }
+}

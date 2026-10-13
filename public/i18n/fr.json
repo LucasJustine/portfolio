@@ -1,0 +1,14 @@
+{
+  "header": {
+    "homeLabel": "Retour à l'accueil",
+    "navigationLabel": "Navigation principale",
+    "about": "À propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "contact": "Contact",
+    "localeLabel": "Choisir la langue",
+    "themeLabel": "Changer de thème",
+    "darkTheme": "Sombre",
+    "lightTheme": "Clair"
+  }
+}

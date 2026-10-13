@@ -1,12 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { HeaderComponent } from './components/header/header';
+
+import { LocalService } from './services/local.service';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [HeaderComponent],
   selector: 'app-root',
-  styleUrl: './app.css',
-  templateUrl: './app.html',
+  templateUrl: './app.html'
 })
 export class App {
-  protected readonly title = signal('portfolio');
+  protected readonly localService = inject(LocalService);
 }

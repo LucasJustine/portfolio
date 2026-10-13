@@ -1,3 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #0b0b0c;
+  --color-primary: #000091;
+  --color-primary-hover: #1212ff;
+  --color-secondary: #e1000f;
+  --color-muted: #666666;
+  --color-panel: #f6f6fe;
+  --color-panel-hover: #eeeeff;
+  --color-border: #ddddf5;
+  --color-contrast-background: #1e1e2f;
+  --color-contrast-foreground: #ffffff;
+}
+
+
+
+[data-theme="light"] {
+  --color-background: #ffffff;
+  --color-foreground: #0b0b0c;
+  --color-primary: #000091;
+  --color-primary-hover: #1212ff;
+  --color-secondary: #e1000f;
+  --color-muted: #666666;
+  --color-panel: #f6f6fe;
+  --color-panel-hover: #eeeeff;
+  --color-border: #ddddf5;
+  --color-contrast-background: #1e1e2f;
+  --color-contrast-foreground: #ffffff;
+}
+
+[data-theme="dark"] {
+  --color-background: #161616;
+  --color-foreground: #f5f5f7;
+  --color-primary: #8585f6;
+  --color-primary-hover: #aaaaff;
+  --color-secondary: #ff6b6b;
+  --color-muted: #d0d0d0;
+  --color-panel: #262626;
+  --color-panel-hover: #373741;
+  --color-border: #4a4a5a;
+  --color-contrast-background: #f5f5f7;
+  --color-contrast-foreground: #0b0b0c;
+}
+
+@layer base {
+  html,
+  body {
+    min-height: 100%;
+    margin: 0;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+body{
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
