@@ -1,0 +1,34 @@
+@if (href()) {
+  <a
+    [href]="href()"
+    class="inline-flex items-center justify-center gap-2 border px-5 py-3 text-sm font-bold no-underline transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    [class.border-primary]="variant() === 'primary'"
+    [class.bg-primary]="variant() === 'primary'"
+    [class.text-white]="variant() === 'primary'"
+    [class.hover:bg-primary-hover]="variant() === 'primary'"
+    [class.border-foreground]="variant() === 'secondary'"
+    [class.text-foreground]="variant() === 'secondary'"
+    [class.hover:bg-panel-hover]="variant() === 'secondary'"
+    [class.border-border]="variant() === 'ghost'"
+    [class.bg-transparent]="variant() === 'ghost'"
+    [class.px-2]="variant() === 'ghost'"
+    [class.py-1]="variant() === 'ghost'"
+    [class.text-muted]="variant() === 'ghost' && !active()"
+    [class.text-primary]="variant() === 'ghost' && active()"
+    [class.hover:border-primary]="variant() === 'ghost'"
+    [class.hover:text-primary]="variant() === 'ghost'"
+  ><ng-container *ngTemplateOutlet="content" /></a>
+} @else {
+  <button
+    [type]="type()"
+    class="inline-flex items-center justify-center gap-2 border px-2 py-1 text-xs font-bold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+    [class.border-border]="variant() === 'ghost'"
+    [class.bg-transparent]="variant() === 'ghost'"
+    [class.text-muted]="variant() === 'ghost' && !active()"
+    [class.text-primary]="variant() === 'ghost' && active()"
+    [class.hover:border-primary]="variant() === 'ghost'"
+    [class.hover:text-primary]="variant() === 'ghost'"
+  ><ng-container *ngTemplateOutlet="content" /></button>
+}
+
+<ng-template #content><ng-content /></ng-template>

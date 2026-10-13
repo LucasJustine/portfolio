@@ -1,0 +1,11 @@
+@switch (element()) {
+  @case ('span') {
+    <span [class]="classes()"><ng-content /></span>
+  }
+  @case ('div') {
+    <div [class]="classes()"><ng-content /></div>
+  }
+  @default {
+    <p [class]="classes()"><ng-content /></p>
+  }
+}
