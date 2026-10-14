@@ -1,0 +1,31 @@
+<dialog
+  #dialog
+  class="m-auto max-h-[85vh] w-[min(640px,calc(100%-2rem))] border border-border bg-background p-0 text-foreground backdrop:bg-black/50 overflow-hidden"
+  [attr.aria-label]="title() || null"
+  (close)="onClose()"
+  (click)="onBackdropClick($event)"
+>
+  <div class="flex max-h-[85vh] flex-col overflow-y-auto">
+    <header class="flex items-start justify-between gap-4 border-b border-border p-6">
+      <h2 class="text-xl font-bold tracking-tight">{{ title() }}</h2>
+      <button
+        type="button"
+        class="-m-2 size-10 cursor-pointer text-xl text-muted transition duration-100 hover:text-primary active:scale-90"
+        [attr.aria-label]="'modal.close' | translate"
+        (click)="open.set(false)"
+      >
+        <svg class="w-6 h-6 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </header>
+
+    <div >
+      @if (template(); as tpl) {
+        <ng-container *ngTemplateOutlet="tpl; context: context()" />
+      } @else {
+        <ng-content />
+      }
+    </div>
+  </div>
+</dialog>
