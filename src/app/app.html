@@ -1,5 +1,10 @@
 <div id="app" class="min-h-screen bg-background font-sans text-foreground antialiased " [attr.data-theme]="localService.currentTheme()">
   <div class="mx-auto w-[min(1180px,calc(100%-3rem))] max-sm:w-[calc(100%-2rem)]">
-  <app-header></app-header>
+    <app-header></app-header>
+    <main>
+        <app-breadcrumb [items]="breadcrumb.items()" />
+
+        <router-outlet />
+    </main>
   </div>
 </div>
