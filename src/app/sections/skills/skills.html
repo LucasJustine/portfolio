@@ -1,0 +1,45 @@
+<section id="competences" class="py-12 sm:py-16" aria-labelledby="skills-heading">
+
+    <div class="mb-10 flex sm:justify-end">
+        <input type="search" [value]="searchQuery()" (input)="onSearchInput($event)"
+            [placeholder]="'skills.searchPlaceholder' | translate"
+            class="w-full sm:w-64 border-b border-border bg-transparent py-1.5 text-sm text-foreground placeholder:text-muted focus:border-primary focus:outline-none" />
+    </div>
+
+    <div class="grid gap-x-16 gap-y-12 sm:grid-cols-2">
+        @for (category of displayedCategories(); track category.id) {
+        <div class="p-5 bg-background-alt">
+            <h3 class=" mb-3 text-base font-semibold text-foreground">
+                {{ categoryText(category, 'name') | translate }}
+            </h3>
+            @for (skill of category.skills; track skill.name) {
+                <div class="flex items-center justify-between gap-2 border-b border-border/50 py-2.5">
+                    <div class="flex min-w-0 items-center gap-2.5">
+                        <app-tech-icon [name]="skill.name" [size]="26" />
+                        <app-tech-home-link [name]="skill.name">
+                           <span class="link-underline truncate text-[15px]" [class.font-semibold]="skill.featured">
+                                {{ skill.name }}
+                            </span>
+                        </app-tech-home-link>
+                    </div>
+                    @if (skill.tag) {
+                    <span class="shrink-0 text-xs text-muted">
+                        {{ 'skills.tags.' + skill.tag | translate }}
+                    </span>
+                    }
+                </div>
+            }
+     
+        </div>
+        } @empty {
+        <div class="col-span-full py-12 text-center">
+            <p class="text-sm font-medium text-foreground">{{ 'skills.empty.title' | translate }}</p>
+            <p class="mt-1 text-sm text-muted">{{ 'skills.empty.description' | translate }}</p>
+            <button type="button" (click)="resetFilters()"
+                class="mt-3 text-sm text-primary underline underline-offset-4 cursor-pointer">
+                {{ 'skills.empty.reset' | translate }}
+            </button>
+        </div>
+        }
+    </div>
+</section>
