@@ -1,14 +1,62 @@
 {
-  "header": {
-    "homeLabel": "Retour à l'accueil",
-    "navigationLabel": "Navigation principale",
-    "about": "À propos",
-    "projects": "Projets",
-    "skills": "Compétences",
-    "contact": "Contact",
-    "localeLabel": "Choisir la langue",
-    "themeLabel": "Changer de thème",
-    "darkTheme": "Sombre",
-    "lightTheme": "Clair"
-  }
+    "breadcrumb": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "skills": "Compétences",
+        "contact": "Contact"
+    },
+    "header": {
+        "homeLabel": "Retour à l'accueil",
+        "navigationLabel": "Navigation principale",
+        "about": "À propos",
+        "projects": "Projets",
+        "skills": "Compétences",
+        "contact": "Contact",
+        "localeLabel": "Choisir la langue",
+        "themeLabel": "Changer de thème",
+        "darkTheme": "Sombre",
+        "lightTheme": "Clair"
+    },
+    "skills": {
+        "badge": "Compétences & Expertise",
+        "title": "Stack Technique & Savoir-faire",
+        "subtitle": "Un aperçu complet des technologies, outils et méthodologies que j'utilise pour concevoir des applications robustes et intuitives.",
+        "filterAll": "Toutes les catégories",
+        "filterLabel": "Filtrer par catégorie",
+        "searchPlaceholder": "Rechercher une technologie, un tag...",
+        "clearSearch": "Effacer la recherche",
+        "skillsCount": "compétences",
+        "showMore": "Afficher plus",
+        "showLess": "Afficher moins",
+        "empty": {
+            "title": "Aucune compétence trouvée",
+            "description": "Aucune technologie ne correspond à vos filtres actuels.",
+            "reset": "Réinitialiser les filtres"
+        },
+        "tags": {
+            "daily": "Au quotidien",
+            "cours": "En formation",
+            "appris": "Appris seul",
+            "pro": "En entreprise"
+        },
+        "categories": {
+            "languages": {
+                "name": "Langages",
+                "description": "Langages de programmation et de balisage"
+            },
+            "frontend": {
+                "name": "Frontend",
+                "description": "Frameworks et bibliothèques d’interfaces réactives"
+            },
+            "backend": {
+                "name": "Backend",
+                "description": "Frameworks serveur, architecture applicative et APIs"
+            },
+            "database": {
+                "name": "Bases de données & Cache",
+                "description": "Stockage relationnel et mise en cache des données"
+            }
+        }
+    }
 }

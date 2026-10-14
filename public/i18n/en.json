@@ -1,14 +1,84 @@
 {
-  "header": {
-    "homeLabel": "Back to home",
-    "navigationLabel": "Main navigation",
-    "about": "About",
-    "projects": "Projects",
-    "skills": "Skills",
-    "contact": "Contact",
-    "localeLabel": "Choose language",
-    "themeLabel": "Change theme",
-    "darkTheme": "Dark",
-    "lightTheme": "Light"
-  }
+    "breadcrumb": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact"
+    },
+    "header": {
+        "homeLabel": "Back to home",
+        "navigationLabel": "Main navigation",
+        "about": "About",
+        "projects": "Projects",
+        "skills": "Skills",
+        "contact": "Contact",
+        "localeLabel": "Choose language",
+        "themeLabel": "Change theme",
+        "darkTheme": "Dark",
+        "lightTheme": "Light"
+    },
+    "skills": {
+        "badge": "Skills & Expertise",
+        "title": "Tech Stack & Know-how",
+        "subtitle": "A complete overview of technologies, tools and methodologies I use to build robust and intuitive applications.",
+        "filterAll": "All categories",
+        "filterLabel": "Filter by category",
+        "searchPlaceholder": "Search a technology, tag...",
+        "clearSearch": "Clear search",
+        "skillsCount": "skills",
+        "showMore": "Show more",
+        "showLess": "Show less",
+        "empty": {
+            "title": "No skills found",
+            "description": "No technology matches your current filters or search query.",
+            "reset": "Reset filters"
+        },
+        "tags": {
+            "daily": "Daily",
+            "cours": "Coursework",
+            "appris": "Self-taught",
+            "pro": "Professional"
+        },
+        "categories": {
+              "languages": {
+                "name": "Languages",
+                "description": "Programming and markup languages"
+            },
+            "frontend": {
+                "name": "Frontend",
+                "description": "Dynamic and responsive client-side web interfaces"
+            },
+            "backend": {
+                "name": "Backend",
+                "description": "Server applications development, business logic and APIs"
+            },
+            "database": {
+                "name": "Databases & Cache",
+                "description": "Relational storage and in-memory caching"
+            }
+        },
+        "items": {
+            "Angular": "Standalone components, Signals, modular architecture and routing",
+            "Vue.js": "Composition API, reactivity and modern component development",
+            "Livewire": "Full-stack dynamic interfaces with Laravel without leaving PHP",
+            "TypeScript": "Static typing, interfaces and frontend code safety",
+            "JavaScript": "Web fundamentals, DOM manipulation and asynchronous programming",
+            "Tailwind CSS": "Rapid UI integration and tailor-made modern utility styling",
+            "HTML5 & CSS3": "HTML semantics, Flexbox/Grid layouts and responsive design",
+            "PHP": "Object-oriented backend development used extensively in corporate apprenticeship",
+            "Laravel": "Primary apprenticeship framework: Eloquent ORM, Blade, migrations, routing",
+            "Java": "Object-oriented programming, strict typing and data structures",
+            "Spring Boot": "Exploring the Spring ecosystem to build Java microservices",
+            "MySQL": "Relational modeling, SQL queries, foreign keys and joins",
+            "Redis": "In-memory key-value store for caching and session management",
+            "Git": "Daily version control system (commits, branching, merging)",
+            "Docker": "Development containerization, images and Docker Compose",
+            "Linux": "Bash scripting, permissions, navigation and terminal environment",
+            "Maven": "Dependency management and build lifecycle for Spring Boot projects",
+            "CI / CD": "Theoretical and practical CI pipeline fundamentals learned during courses",
+            "PHPUnit": "Unit and feature testing to secure PHP / Laravel codebases",
+            "Méthodes Agiles (Scrum / Kanban)": "Sprint organization, backlog management and agile rituals"
+        }
+    }
 }
