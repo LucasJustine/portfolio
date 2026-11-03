@@ -32,6 +32,7 @@ export const TECH_REGISTRY = {
     Sass: { slug: "sass", hex: "cc6699", mono: "Sa", home: "https://sass-lang.com" },
     Tailwind: { slug: "tailwindcss", hex: "06b6d4", mono: "Tw", home: "https://tailwindcss.com" },
     "Tailwind CSS": { slug: "tailwindcss", hex: "06b6d4", mono: "Tw", home: "https://tailwindcss.com" },
+    DSFR: { slug: "dsfr", hex: "000091", mono: "DSFR", home: "https://www.systeme-de-design.gouv.fr/version-courante/fr" },
     RxJS: { slug: "reactivex", hex: "b7178c", mono: "Rx", home: "https://rxjs.dev" },
     React: { slug: "react", hex: "149eca", mono: "Re", home: "https://react.dev" },
     "React-Native": { slug: "react", hex: "149eca", mono: "RN", home: "https://reactnative.dev" },

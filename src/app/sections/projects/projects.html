@@ -1,0 +1,74 @@
+<section class="py-12 sm:py-16" aria-labelledby="projects-title">
+    <h1 id="projects-title" class="mb-2 text-[clamp(1.75rem,3.6vw,2rem)] leading-[1.1] font-bold tracking-[-0.025em]">
+        {{ 'projects.title' | translate }}
+    </h1>
+    <p class="mb-8 max-w-[60ch] text-muted">{{ 'projects.lead' | translate }}</p>
+
+    <div class="grid gap-x-4 gap-y-6 sm:grid-cols-2">
+        @for (project of projects; track project.id) {
+        <app-card [clickable]="true" (selected)="open(project)">
+            <div class=" flex ">
+                <span class=" text-[clamp(1.5rem,3vw,2rem)] leading-[1.05] font-bold tracking-[-0.03em]">
+                    {{ projectText(project, 'title') | translate }}
+                </span>
+            </div>
+            <p class="mt-2 mb-4 text-[15px] text-muted max-[640px]:line-clamp-2">{{ projectText(project, 'details') |
+                translate }}</p>
+            <ul class="flex flex-wrap justify-end gap-1.5 ">
+                @for (tech of project.stack; track tech; let i = $index) {
+                <app-tech-icon [name]="tech" [size]="24" />
+                }
+                @if (project.stack.length > 2) {
+                <li class="hidden px-1 py-0.5 text-[13px] font-semibold text-muted max-[640px]:block"
+                    aria-hidden="true">…</li>
+                }
+            </ul>
+        </app-card>
+        }
+    </div>
+</section>
+
+<app-modal [(open)]="modalOpen" [title]="selected() ? (projectText(selected()!, 'title') | translate) : ''"
+    [template]="projectDetail" [context]="{ $implicit: selected() }" />
+
+<ng-template #projectDetail let-project>
+    @if (project) {
+    <div class=" p-6">
+        <p class="mb-6 text-muted">{{ projectText(project, 'details') | translate }}</p>
+        @if (project.imgSrc) {
+        <div>
+            <img src="/images/{{ project.imgSrc }}" [alt]="projectText(project, 'title') | translate"
+                class="h-auto w-full object-cover" />
+        </div>
+        }
+        <p class="mb-6 text-muted">{{ projectText(project, 'body') | translate }}</p>
+
+        <h3 class="mb-3 text-sm font-semibold">{{ 'projects.stack' | translate }}</h3>
+        <ul class="mb-6 flex flex-wrap gap-4">
+            @for (tech of project.stack; track tech) {
+            <li class="flex items-center gap-2 text-sm">
+                <app-tech-icon [name]="tech" [size]="24" />
+                {{ tech }}
+            </li>
+            }
+        </ul>
+
+        @if (project.repo || project.demo) {
+        <div class="flex flex-wrap gap-3">
+            @if (project.repo) {
+            <a [href]="project.repo" target="_blank" rel="noopener noreferrer"
+                class="border border-foreground px-4 py-2 text-sm font-bold no-underline transition duration-100 hover:bg-panel-hover active:scale-[.97]">
+                {{ 'projects.repo' | translate }}
+            </a>
+            }
+            @if (project.demo) {
+            <a [href]="project.demo" target="_blank" rel="noopener noreferrer"
+                class="border border-primary bg-primary px-4 py-2 text-sm font-bold text-on-primary no-underline transition duration-100 hover:bg-primary-hover active:scale-[.97]">
+                {{ 'projects.demo' | translate }}
+            </a>
+            }
+        </div>
+        }
+    </div>
+    }
+</ng-template>

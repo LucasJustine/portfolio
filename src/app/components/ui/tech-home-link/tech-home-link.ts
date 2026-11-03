@@ -10,12 +10,12 @@ import { NgTemplateOutlet } from '@angular/common';
         [href]="href()"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
+        class="inline-flex min-w-0 items-center gap-1.5 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-primary"
       >
         <ng-container *ngTemplateOutlet="content" />
       </a>
     } @else {
-      <span class="inline-flex items-center gap-1.5">
+      <span class="inline-flex min-w-0 items-center gap-1.5">
         <ng-container *ngTemplateOutlet="content" />
       </span>
     }
@@ -24,8 +24,9 @@ import { NgTemplateOutlet } from '@angular/common';
     
   `,
     styles: `
-    :host {
+     :host {
       display: inline-flex;
+      min-width: 0;
     }
   `,
     imports: [NgTemplateOutlet],

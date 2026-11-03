@@ -58,5 +58,26 @@
                 "description": "Stockage relationnel et mise en cache des données"
             }
         }
+    },
+    "projects": {
+        "items": {
+            "aca": {
+                "title": "Applications des chaussées aéronautiques",
+                "details": "ACA est une application web publique développée par le STAC, dédiée à la gestion et à l'évaluation des chaussées aéronautiques",
+                "body": "Application de gestion de stock développée en PHP avec Livewire. Elle suit les entrées et sorties, déclenche des alertes quand un seuil est atteint et exporte les données pour la comptabilité."
+            },
+            "dashboard": {
+                "cover": "Tableau de bord",
+                "details": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes."
+            },
+            "booking": {
+                "cover": "Réservation de salles",
+                "details": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail."
+            },
+            "portfolio": {
+                "cover": "Portfolio",
+                "details": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste."
+            }
+        }
     }
 }

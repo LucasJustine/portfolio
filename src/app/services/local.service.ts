@@ -1,4 +1,4 @@
-import { Service, computed, inject, signal } from "@angular/core";
+import { DOCUMENT, Service, computed, effect, inject, signal } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 
 export type Theme = 'light' | 'dark';
@@ -8,11 +8,18 @@ export type Locale = 'fr' | 'en';
 export class LocalService {
     private readonly translateService = inject(TranslateService);
     private readonly selectedTheme = signal<Theme>(this.getInitialTheme());
+    private readonly document = inject(DOCUMENT);
     public readonly currentLocale = computed<Locale>(() => {
         const lang = this.translateService.currentLang();
         return lang === 'en' ? 'en' : 'fr';
     });
     public readonly currentTheme = this.selectedTheme.asReadonly();
+    
+    constructor() {
+        effect(() => {
+            this.document.documentElement.dataset['theme'] = this.selectedTheme();
+        });
+    }
 
     changeLocale(locale: Locale) {
         this.translateService.use(locale);

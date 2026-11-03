@@ -1,15 +1,20 @@
 <header class="flex items-center justify-between gap-4 border-b border-border py-6">
+    <!-- Desktop-->
     <nav
         class="hidden items-center gap-6 text-xs font-bold uppercase tracking-[.08em] min-[720px]:flex"
         [attr.aria-label]="'header.navigationLabel' | translate"
     >
-        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#a-propos">{{ 'header.about' | translate }}</a>
-        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#projets">{{ 'header.projects' | translate }}</a>
-        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" routerLink="/competencies">{{ 'header.skills' | translate }}</a>
-        <a class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="#contact">{{ 'header.contact' | translate }}</a>
+        @for (link of links; track link.label) {
+        <a
+            class="text-foreground no-underline transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            [routerLink]="link.route"
+            [fragment]="link.fragment"
+        >{{ link.label | translate }}</a>
+        }
     </nav>
 
-    <div class="flex w-full items-center justify-between gap-3 text-xs font-bold min-[720px]:ml-auto min-[720px]:w-auto">
+    <!-- Desktop  -->
+    <div class="hidden items-center gap-3 text-xs font-bold min-[720px]:flex">
         <app-segmented-view
             [options]="localeOptions"
             [value]="localService.currentLocale()"
@@ -23,4 +28,69 @@
             (valueChange)="localService.changeTheme($event)"
         />
     </div>
+
+    <!-- Mobile -->
+    <button
+        type="button"
+        class="ml-auto -mr-2 flex size-11 cursor-pointer items-center justify-center text-foreground transition duration-100 ease-out hover:text-primary active:scale-90 min-[720px]:hidden"
+        aria-haspopup="dialog"
+        aria-controls="mobile-menu"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="'header.openMenu' | translate"
+        (click)="openMenu()"
+    >
+        <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+    </button>
+
+    <!-- Mobile  -->
+    <dialog
+        #menu
+        id="mobile-menu"
+        class="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none overflow-y-auto border-0 bg-background p-0 text-foreground"
+        [attr.aria-label]="'header.menuLabel' | translate"
+        (close)="closeMenu()"
+    >
+        <div class="mx-auto flex min-h-full w-[calc(100%-2rem)] max-w-[1180px] flex-col">
+            <div class="flex justify-end py-6">
+                <button
+                    type="button"
+                    class="-mr-2 flex h-11 cursor-pointer items-center gap-2 px-2 text-sm font-bold text-foreground transition duration-100 ease-out hover:text-primary active:scale-95"
+                    (click)="closeMenu()"
+                >
+                    {{ 'header.close' | translate }}
+                    <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex flex-col border-t border-border" [attr.aria-label]="'header.navigationLabel' | translate">
+                @for (link of links; track link.label) {
+                <a
+                    class="border-b border-border py-4 text-lg font-bold text-foreground no-underline transition-colors hover:text-primary"
+                    [routerLink]="link.route"
+                    [fragment]="link.fragment"
+                    (click)="closeMenu()"
+                >{{ link.label | translate }}</a>
+                }
+            </nav>
+
+            <div class="mt-auto flex items-center justify-between gap-3 py-6 text-xs font-bold">
+                <app-segmented-view
+                    [options]="localeOptions"
+                    [value]="localService.currentLocale()"
+                    [ariaLabel]="'header.localeLabel' | translate"
+                    (valueChange)="localService.changeLocale($event)"
+                />
+                <app-segmented-view
+                    [options]="themeOptions"
+                    [value]="localService.currentTheme()"
+                    [ariaLabel]="'header.themeLabel' | translate"
+                    (valueChange)="localService.changeTheme($event)"
+                />
+            </div>
+        </div>
+    </dialog>
 </header>
