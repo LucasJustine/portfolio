@@ -95,12 +95,7 @@
             "aca": {
                 "title": "Applications des chaussées aéronautiques",
                 "details": "ACA est une application web publique développée par le STAC, dédiée à la gestion et à l'évaluation des chaussées aéronautiques",
-                "body": "Application de gestion de stock développée en PHP avec Livewire. Elle suit les entrées et sorties, déclenche des alertes quand un seuil est atteint et exporte les données pour la comptabilité."
-            },
-            "dashboard": {
-                "details": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes.",
-                "title": "Tableau de bord",
-                "body": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes."
+                "body": "Application de "
             },
             "booking": {
                 "details": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail.",
@@ -115,7 +110,7 @@
             "parcoursup": {
                 "title": "Application Parcoursup",
                 "details": "Application Android pour consulter les formations Parcoursup, avec statistiques 2024, favoris et carte interactive.",
-                "body": "Application Android moderne développée en Kotlin pour parcourir les formations Parcoursup. Elle propose une recherche avec filtre par filière, des statistiques 2024 détaillées (taux d’accès, répartition par genre et par bac, mentions), une carte des établissements et des favoris sauvegardés en local. Un enregistrement d’écran permet aussi de partager une démonstration."
+                "body": "Application Android moderne développée en Kotlin pour parcourir les formations Parcoursup. Elle propose une recherche avec filtre par filière, des statistiques 2024 détaillées (taux d’accès, répartition par genre et par bac, mentions), une carte des établissements et des favoris sauvegardés en local"
             },
             "trains": {
                 "title": "Réservation de trains",
@@ -130,12 +125,12 @@
             "jsonInspector": {
                 "title": "Inspecteur de JSON",
                 "details": "Programme Java qui affiche un fichier JSON de façon lisible, en interface graphique ou en console.",
-                "body": "Inspecteur de JSON en Java (SAÉ 3.2). Lancé sans argument, il ouvre une fenêtre graphique ; avec une URL en argument, il affiche le JSON formaté dans la console. Les couleurs et la taille de la fenêtre se règlent dans un fichier de configuration."
+                "body": "Inspecteur de JSON en Java. Lancé sans argument, il ouvre une fenêtre graphique ; avec une URL en argument, il affiche le JSON formaté dans la console. Les couleurs et la taille de la fenêtre se règlent dans un fichier de configuration."
             },
             "kickoff": {
                 "title": "Kickoff Matchup",
-                "details": "Projet en cours de développement.",
-                "body": "Projet en cours de développement."
+                "details": "Projet permettant de créer des rencontres de foot entre amis",
+                "body": "En cours de développement"
             }
         }
     },

@@ -52,11 +52,6 @@
                 "details": "ACA is a public web application developed by STAC, dedicated to managing and assessing airfield pavements.",
                 "body": "Inventory management application built in PHP with Livewire. It tracks stock in and out, raises alerts when a threshold is reached and exports data for accounting."
             },
-            "dashboard": {
-                "title": "Dashboard",
-                "details": "Angular dashboard with real-time indicators and filters. The goal: read what matters in under ten seconds.",
-                "body": "Angular dashboard with real-time indicators and filters. The goal: read what matters in under ten seconds."
-            },
             "booking": {
                 "title": "Room booking",
                 "details": "Room booking with a shared calendar. Conflicts are detected before confirmation and a reminder is sent by email.",
@@ -70,7 +65,7 @@
             "parcoursup": {
                 "title": "Parcoursup app",
                 "details": "Android app to browse Parcoursup programs, with 2024 statistics, favorites and an interactive map.",
-                "body": "Modern Android app written in Kotlin to browse Parcoursup programs. It offers search with a field filter, detailed 2024 statistics (admission rate, gender and baccalaureate breakdown, honors), a map of institutions and favorites stored locally. Screen recording also lets you share a demo."
+                "body": "Modern Android app written in Kotlin to browse Parcoursup programs. It offers search with a field filter, detailed 2024 statistics (admission rate, gender and baccalaureate breakdown, honors), a map of institutions and favorites stored locally"
             },
             "trains": {
                 "title": "Train booking",
@@ -85,12 +80,12 @@
             "jsonInspector": {
                 "title": "JSON Inspector",
                 "details": "Java program that displays a JSON file in a readable way, in a GUI or in the console.",
-                "body": "JSON inspector in Java (SAÉ 3.2). Started without arguments it opens a graphical window; with a URL as argument it prints the formatted JSON in the console. Colors and window size are set in a configuration file."
+                "body": "JSON inspector in Java. Started without arguments it opens a graphical window; with a URL as argument it prints the formatted JSON in the console. Colors and window size are set in a configuration file."
             },
             "kickoff": {
                 "title": "Kickoff Matchup",
-                "details": "Project under development.",
-                "body": "Project under development."
+                "details": "Project to organize football matches between friends",
+                "body": "Under development"
             }
         }
     },
@@ -137,28 +132,6 @@
                 "name": "Tools & DevOps",
                 "description": "Version control, containers and everyday tooling"
             }
-        },
-        "items": {
-            "Angular": "Standalone components, Signals, modular architecture and routing",
-            "Vue.js": "Composition API, reactivity and modern component development",
-            "Livewire": "Full-stack dynamic interfaces with Laravel without leaving PHP",
-            "TypeScript": "Static typing, interfaces and frontend code safety",
-            "JavaScript": "Web fundamentals, DOM manipulation and asynchronous programming",
-            "Tailwind CSS": "Rapid UI integration and tailor-made modern utility styling",
-            "HTML5 & CSS3": "HTML semantics, Flexbox/Grid layouts and responsive design",
-            "PHP": "Object-oriented backend development used extensively in corporate apprenticeship",
-            "Laravel": "Primary apprenticeship framework: Eloquent ORM, Blade, migrations, routing",
-            "Java": "Object-oriented programming, strict typing and data structures",
-            "Spring Boot": "Exploring the Spring ecosystem to build Java microservices",
-            "MySQL": "Relational modeling, SQL queries, foreign keys and joins",
-            "Redis": "In-memory key-value store for caching and session management",
-            "Git": "Daily version control system (commits, branching, merging)",
-            "Docker": "Development containerization, images and Docker Compose",
-            "Linux": "Bash scripting, permissions, navigation and terminal environment",
-            "Maven": "Dependency management and build lifecycle for Spring Boot projects",
-            "CI / CD": "Theoretical and practical CI pipeline fundamentals learned during courses",
-            "PHPUnit": "Unit and feature testing to secure PHP / Laravel codebases",
-            "Méthodes Agiles (Scrum / Kanban)": "Sprint organization, backlog management and agile rituals"
         }
     },
     "modal": {
