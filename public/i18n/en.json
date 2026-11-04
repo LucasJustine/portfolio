@@ -22,6 +22,24 @@
         "close": "Close",
         "menuLabel": "Navigation menu"
     },
+    "home": {
+        "role": "Full-stack web developer",
+        "title": "Lucas Justine",
+        "lead": "I build robust, accessible web applications, from the back end to the interface. Here is a selection of my projects and the technologies I use.",
+        "ctaProjects": "View my projects",
+        "ctaSkills": "My skills",
+        "stackLabel": "Main technologies",
+        "about": {
+            "title": "About",
+            "p1": "I am a web developer passionate about building clear interfaces and maintainable applications.",
+            "p2": "I keep learning, both in class and at work, and I like picking up new tools by building things."
+        },
+        "contact": {
+            "title": "Contact",
+            "lead": "A question, an opportunity, or just want to chat? Feel free to get in touch.",
+            "email": "Send me an email"
+        }
+    },
     "projects": {
         "title": "Projects",
         "lead": "A selection of work from coursework and professional experience.",
@@ -48,6 +66,31 @@
                 "title": "Portfolio",
                 "details": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture.",
                 "body": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture."
+            },
+            "parcoursup": {
+                "title": "Parcoursup app",
+                "details": "Android app to browse Parcoursup programs, with 2024 statistics, favorites and an interactive map.",
+                "body": "Modern Android app written in Kotlin to browse Parcoursup programs. It offers search with a field filter, detailed 2024 statistics (admission rate, gender and baccalaureate breakdown, honors), a map of institutions and favorites stored locally. Screen recording also lets you share a demo."
+            },
+            "trains": {
+                "title": "Train booking",
+                "details": "Train search and booking platform: REST API, booking service and Java client.",
+                "body": "Web services project made of a REST API (TrainB) to manage trains and schedules, a booking service (BookingService) deployed on Tomcat 9, and a Java client to search a journey by station, date and time, then book it. Data is stored in SQLite and the API is documented with OpenAPI."
+            },
+            "ihm": {
+                "title": "Student group management",
+                "details": "Java desktop app to manage student groups.",
+                "body": "Human-computer interaction project in Java dedicated to managing student groups."
+            },
+            "jsonInspector": {
+                "title": "JSON Inspector",
+                "details": "Java program that displays a JSON file in a readable way, in a GUI or in the console.",
+                "body": "JSON inspector in Java (SAÉ 3.2). Started without arguments it opens a graphical window; with a URL as argument it prints the formatted JSON in the console. Colors and window size are set in a configuration file."
+            },
+            "kickoff": {
+                "title": "Kickoff Matchup",
+                "details": "Project under development.",
+                "body": "Project under development."
             }
         }
     },
@@ -89,6 +132,10 @@
             "database": {
                 "name": "Databases & Cache",
                 "description": "Relational storage and in-memory caching"
+            },
+            "tools": {
+                "name": "Tools & DevOps",
+                "description": "Version control, containers and everyday tooling"
             }
         },
         "items": {
@@ -116,5 +163,9 @@
     },
     "modal": {
         "close": "Close dialog"
+    },
+    "carousel": {
+        "previous": "Previous image",
+        "next": "Next image"
     }
 }

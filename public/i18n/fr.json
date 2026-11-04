@@ -22,6 +22,24 @@
         "close": "Fermer",
         "menuLabel": "Menu de navigation"
     },
+    "home": {
+        "role": "Développeur web full-stack",
+        "title": "Lucas Justine",
+        "lead": "Je conçois des applications web robustes et accessibles, du back-end à l’interface. Voici une sélection de mes projets et des technologies que j’utilise.",
+        "ctaProjects": "Voir mes projets",
+        "ctaSkills": "Mes compétences",
+        "stackLabel": "Technologies principales",
+        "about": {
+            "title": "À propos",
+            "p1": "Je suis développeur web, passionné par la création d’interfaces claires et d’applications maintenables.",
+            "p2": "Je me forme en continu, en cours comme en entreprise, et j’aime apprendre de nouveaux outils par la pratique."
+        },
+        "contact": {
+            "title": "Contact",
+            "lead": "Une question, une opportunité ou simplement envie d’échanger ? N’hésitez pas à m’écrire.",
+            "email": "M’envoyer un e-mail"
+        }
+    },
     "skills": {
         "badge": "Compétences & Expertise",
         "title": "Stack Technique & Savoir-faire",
@@ -60,6 +78,10 @@
             "database": {
                 "name": "Bases de données & Cache",
                 "description": "Stockage relationnel et mise en cache des données"
+            },
+            "tools": {
+                "name": "Outils & DevOps",
+                "description": "Versionnement, conteneurs et outils du quotidien"
             }
         }
     },
@@ -89,10 +111,39 @@
                 "details": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste.",
                 "title": "Portfolio",
                 "body": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste."
+            },
+            "parcoursup": {
+                "title": "Application Parcoursup",
+                "details": "Application Android pour consulter les formations Parcoursup, avec statistiques 2024, favoris et carte interactive.",
+                "body": "Application Android moderne développée en Kotlin pour parcourir les formations Parcoursup. Elle propose une recherche avec filtre par filière, des statistiques 2024 détaillées (taux d’accès, répartition par genre et par bac, mentions), une carte des établissements et des favoris sauvegardés en local. Un enregistrement d’écran permet aussi de partager une démonstration."
+            },
+            "trains": {
+                "title": "Réservation de trains",
+                "details": "Plateforme de recherche et de réservation de trains : API REST, service de réservation et client Java.",
+                "body": "Projet de services web composé d’une API REST (TrainB) pour gérer les trains et les horaires, d’un service de réservation (BookingService) déployé sur Tomcat 9 et d’un client Java pour rechercher un trajet par gare, date et heure, puis réserver. Les données sont stockées en SQLite et l’API est documentée avec OpenAPI."
+            },
+            "ihm": {
+                "title": "Gestion de groupes d’étudiants",
+                "details": "Application Java à interface graphique pour gérer des groupes d’étudiants.",
+                "body": "Projet d’interface homme-machine en Java dédié à la gestion de groupes d’étudiants."
+            },
+            "jsonInspector": {
+                "title": "Inspecteur de JSON",
+                "details": "Programme Java qui affiche un fichier JSON de façon lisible, en interface graphique ou en console.",
+                "body": "Inspecteur de JSON en Java (SAÉ 3.2). Lancé sans argument, il ouvre une fenêtre graphique ; avec une URL en argument, il affiche le JSON formaté dans la console. Les couleurs et la taille de la fenêtre se règlent dans un fichier de configuration."
+            },
+            "kickoff": {
+                "title": "Kickoff Matchup",
+                "details": "Projet en cours de développement.",
+                "body": "Projet en cours de développement."
             }
         }
     },
     "modal": {
         "close": "Fermer la fenêtre"
+    },
+    "carousel": {
+        "previous": "Image précédente",
+        "next": "Image suivante"
     }
 }
