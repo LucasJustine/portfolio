@@ -10,7 +10,7 @@ import fr from '../../public/i18n/fr.json';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })),
     provideHttpClient(),
     provideTranslateService({
       lang: 'fr',
