@@ -8,6 +8,7 @@ export interface Project {
     repo?: string;
     demo?: string;
     images?: string[];
+    imageFormat?: 'landscape' | 'portrait';
 }
 
 export const projectText = (

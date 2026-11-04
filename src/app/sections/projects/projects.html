@@ -39,7 +39,7 @@
     @if (project) {
     <div class="p-6">
         @if (project.images?.length) {
-        <app-carousel class="mb-6" [images]="project.images" [alt]="projectText(project, 'title') | translate" />
+        <app-carousel class="mb-6" [images]="project.images" [format]="project.imageFormat ?? 'landscape'" [alt]="projectText(project, 'title') | translate" />
         }
         <p class="mb-6 max-w-[65ch]">{{ projectText(project, 'body') | translate }}</p>
 
