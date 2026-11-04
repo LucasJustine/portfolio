@@ -136,13 +136,11 @@ export const getTechIconPath = (name: TechName | string): string | undefined => 
     const entry = getTechEntry(name);
     return entry?.slug ? TECH_ICON_PATHS[entry.slug] : undefined;
 };
-/** Récupère la couleur hexadécimale associée */
 export const getTechColor = (name: TechName | string): string | undefined => {
     const entry = getTechEntry(name);
     return entry ? `#${entry.hex}` : undefined;
 };
 
-/** Récupère le monogramme (ex: "Ng", "TS", "Jv") */
 export const getTechMono = (name: TechName | string): string => {
     const entry = getTechEntry(name);
     if (entry?.mono) return entry.mono;
