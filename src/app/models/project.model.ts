@@ -4,7 +4,10 @@ export interface Project {
     id: string;
     stack: TechName[];
     repo?: string;
+    demo?: string;
     imgSrc?: string;
+    imgWidth?: number;
+    imgHeight?: number;
 }
 
 export const projectText = (

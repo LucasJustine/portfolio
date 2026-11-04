@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PROJECTS } from '../../data/project.data';
 import { Project, projectText } from '../../models/project.model';
@@ -8,7 +9,7 @@ import { TechIconComponent } from '../../components/ui/tech-icon/tech-icon';
 
 @Component({
     selector: 'app-projects',
-    imports: [TranslatePipe, CardComponent, ModalComponent, TechIconComponent],
+    imports: [NgOptimizedImage, TranslatePipe, CardComponent, ModalComponent, TechIconComponent],
     templateUrl: './projects.html',
     styles: ':host { display: block; }',
 })
