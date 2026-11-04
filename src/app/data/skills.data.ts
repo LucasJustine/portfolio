@@ -24,7 +24,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
                 tag: 'cours',
             },
             {
-                name: 'HTML5 & CSS3 / SCSS',
+                name: 'HTML5 & CSS3',
+                tag: 'cours',
+            },
+            {
+                name: 'Kotlin',
                 tag: 'cours',
             },
         ],
@@ -68,6 +72,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
                 name: 'Spring Boot',
                 tag: 'appris',
             },
+            {
+                name: 'WebSocket',
+                tag: 'cours',
+            },
 
         ],
     },
@@ -83,6 +91,21 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
             },
             {
                 name: 'Redis',
+                tag: 'cours',
+            },
+        ],
+    },
+    {
+        id: 'tools',
+        name: 'Outils & DevOps',
+        icon: 'wrench',
+        skills: [
+            {
+                name: 'Git',
+                tag: 'daily',
+            },
+            {
+                name: 'Docker',
                 tag: 'cours',
             },
         ],
