@@ -10,11 +10,11 @@
       <h2 class="text-xl font-bold tracking-tight">{{ title() }}</h2>
       <button
         type="button"
-        class="-m-2 size-10 cursor-pointer text-xl text-muted transition duration-100 hover:text-primary active:scale-90"
+        class="-m-2 flex size-10 shrink-0 cursor-pointer items-center justify-center text-muted transition duration-100 hover:text-primary active:scale-90"
         [attr.aria-label]="'modal.close' | translate"
         (click)="open.set(false)"
       >
-        <svg class="w-6 h-6 text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>

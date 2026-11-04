@@ -1,5 +1,5 @@
 import { Component, DestroyRef, DOCUMENT, ElementRef, effect, inject, signal, viewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { IsActiveMatchOptions, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Locale, LocalService, Theme } from '../../services/local.service';
 import { SegmentedViewComponent, SegmentOption } from '../ui/segmented-view/segmented-view';
@@ -7,7 +7,7 @@ import { SegmentedViewComponent, SegmentOption } from '../ui/segmented-view/segm
 @Component({
     selector: 'app-header',
     templateUrl: './header.html',
-    imports: [TranslatePipe, SegmentedViewComponent, RouterLink],
+    imports: [TranslatePipe, SegmentedViewComponent, RouterLink, RouterLinkActive],
     styles: `
     dialog {
       transform: translateX(100%);
@@ -30,6 +30,13 @@ export class HeaderComponent {
     private readonly menu = viewChild.required<ElementRef<HTMLDialogElement>>('menu');
 
     readonly menuOpen = signal(false);
+
+    readonly activeOptions: IsActiveMatchOptions = {
+        paths: 'exact',
+        fragment: 'exact',
+        queryParams: 'ignored',
+        matrixParams: 'ignored',
+    };
 
     readonly links = [
         { label: 'header.about', route: '/', fragment: 'a-propos' },

@@ -17,8 +17,8 @@
   @for (option of options(); track option.value) {
     <button
       #segmentButton
-      class="relative z-10 min-w-10 shrink-0 rounded px-3 py-1 text-center transition-colors duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary max-[560px]:aria-[checked=false]:hidden"
-      [class.text-white]="option.value === value()"
+      class="relative z-10 min-w-10 shrink-0 rounded px-3 py-1 text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary max-[560px]:aria-[checked=false]:hidden"
+      [class.text-on-primary]="option.value === value()"
       [class.text-muted]="option.value !== value()"
       [attr.aria-checked]="option.value === value()"
       [attr.tabindex]="option.value === value() ? 0 : -1"
