@@ -4,7 +4,8 @@
         "about": "À propos",
         "projects": "Projets",
         "skills": "Compétences",
-        "contact": "Contact"
+        "contact": "Contact",
+        "label": "Fil d'Ariane"
     },
     "header": {
         "homeLabel": "Retour à l'accueil",
@@ -16,7 +17,10 @@
         "localeLabel": "Choisir la langue",
         "themeLabel": "Changer de thème",
         "darkTheme": "Sombre",
-        "lightTheme": "Clair"
+        "lightTheme": "Clair",
+        "openMenu": "Ouvrir le menu",
+        "close": "Fermer",
+        "menuLabel": "Menu de navigation"
     },
     "skills": {
         "badge": "Compétences & Expertise",
@@ -60,6 +64,11 @@
         }
     },
     "projects": {
+        "title": "Projets",
+        "lead": "Une sélection de réalisations issues de la formation et de l'entreprise.",
+        "stack": "Stack technique",
+        "repo": "Code source",
+        "demo": "Voir le projet",
         "items": {
             "aca": {
                 "title": "Applications des chaussées aéronautiques",
@@ -67,17 +76,23 @@
                 "body": "Application de gestion de stock développée en PHP avec Livewire. Elle suit les entrées et sorties, déclenche des alertes quand un seuil est atteint et exporte les données pour la comptabilité."
             },
             "dashboard": {
-                "cover": "Tableau de bord",
-                "details": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes."
+                "details": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes.",
+                "title": "Tableau de bord",
+                "body": "Tableau de bord Angular avec indicateurs en temps réel et filtres. L'objectif : lire l'essentiel en moins de dix secondes."
             },
             "booking": {
-                "cover": "Réservation de salles",
-                "details": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail."
+                "details": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail.",
+                "title": "Réservation de salles",
+                "body": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail."
             },
             "portfolio": {
-                "cover": "Portfolio",
-                "details": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste."
+                "details": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste.",
+                "title": "Portfolio",
+                "body": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste."
             }
         }
+    },
+    "modal": {
+        "close": "Fermer la fenêtre"
     }
 }

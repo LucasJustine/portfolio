@@ -4,7 +4,8 @@
         "about": "About",
         "projects": "Projects",
         "skills": "Skills",
-        "contact": "Contact"
+        "contact": "Contact",
+        "label": "Breadcrumb"
     },
     "header": {
         "homeLabel": "Back to home",
@@ -16,7 +17,39 @@
         "localeLabel": "Choose language",
         "themeLabel": "Change theme",
         "darkTheme": "Dark",
-        "lightTheme": "Light"
+        "lightTheme": "Light",
+        "openMenu": "Open menu",
+        "close": "Close",
+        "menuLabel": "Navigation menu"
+    },
+    "projects": {
+        "title": "Projects",
+        "lead": "A selection of work from coursework and professional experience.",
+        "stack": "Tech stack",
+        "repo": "Source code",
+        "demo": "View project",
+        "items": {
+            "aca": {
+                "title": "Airfield pavement applications",
+                "details": "ACA is a public web application developed by STAC, dedicated to managing and assessing airfield pavements.",
+                "body": "Inventory management application built in PHP with Livewire. It tracks stock in and out, raises alerts when a threshold is reached and exports data for accounting."
+            },
+            "dashboard": {
+                "title": "Dashboard",
+                "details": "Angular dashboard with real-time indicators and filters. The goal: read what matters in under ten seconds.",
+                "body": "Angular dashboard with real-time indicators and filters. The goal: read what matters in under ten seconds."
+            },
+            "booking": {
+                "title": "Room booking",
+                "details": "Room booking with a shared calendar. Conflicts are detected before confirmation and a reminder is sent by email.",
+                "body": "Room booking with a shared calendar. Conflicts are detected before confirmation and a reminder is sent by email."
+            },
+            "portfolio": {
+                "title": "Portfolio",
+                "details": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture.",
+                "body": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture."
+            }
+        }
     },
     "skills": {
         "badge": "Skills & Expertise",
@@ -41,7 +74,7 @@
             "pro": "Professional"
         },
         "categories": {
-              "languages": {
+            "languages": {
                 "name": "Languages",
                 "description": "Programming and markup languages"
             },
@@ -80,5 +113,8 @@
             "PHPUnit": "Unit and feature testing to secure PHP / Laravel codebases",
             "Méthodes Agiles (Scrum / Kanban)": "Sprint organization, backlog management and agile rituals"
         }
+    },
+    "modal": {
+        "close": "Close dialog"
     }
 }

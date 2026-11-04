@@ -19,6 +19,9 @@ export class LocalService {
         effect(() => {
             this.document.documentElement.dataset['theme'] = this.selectedTheme();
         });
+        effect(() => {
+            this.document.documentElement.lang = this.currentLocale();
+        });
     }
 
     changeLocale(locale: Locale) {

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 export interface BreadcrumbItem {
   label: string;
@@ -9,11 +10,11 @@ export interface BreadcrumbItem {
 @Component({
   selector: 'app-breadcrumb',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     @if (items().length) {
-      <nav aria-label="Fil d'Ariane" class="breadcrumb">
+      <nav [attr.aria-label]="'breadcrumb.label' | translate" class="breadcrumb">
         <ol>
           @for (item of items(); track $index; let last = $last) {
             <li>
