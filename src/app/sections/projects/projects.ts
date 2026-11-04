@@ -3,6 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { TranslatePipe } from '@ngx-translate/core';
 import { PROJECTS } from '../../data/project.data';
 import { Project, projectText } from '../../models/project.model';
+import { ButtonComponent } from '../../components/ui/button/button';
 import { CardComponent } from '../../components/ui/card/card';
 import { CarouselComponent } from '../../components/ui/carousel/carousel';
 import { ModalComponent } from '../../components/ui/modal/modal';
@@ -11,7 +12,7 @@ import { TechIconComponent } from '../../components/ui/tech-icon/tech-icon';
 
 @Component({
     selector: 'app-projects',
-    imports: [TranslatePipe, CardComponent, CarouselComponent, ModalComponent, ShowMoreComponent, TechIconComponent],
+    imports: [TranslatePipe, ButtonComponent, CardComponent, CarouselComponent, ModalComponent, ShowMoreComponent, TechIconComponent],
     templateUrl: './projects.html',
     styles: ':host { display: block; }',
 })

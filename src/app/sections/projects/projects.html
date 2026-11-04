@@ -56,16 +56,10 @@
         @if (project.repo || project.demo) {
         <div class="flex flex-wrap gap-3">
             @if (project.repo) {
-            <a [href]="project.repo" target="_blank" rel="noopener noreferrer"
-                class="border border-foreground px-4 py-2 text-sm font-bold no-underline transition duration-100 hover:bg-panel-hover active:scale-[.97]">
-                {{ 'projects.repo' | translate }}
-            </a>
+            <app-button [href]="project.repo" [external]="true" variant="secondary">{{ 'projects.repo' | translate }}</app-button>
             }
             @if (project.demo) {
-            <a [href]="project.demo" target="_blank" rel="noopener noreferrer"
-                class="border border-primary bg-primary px-4 py-2 text-sm font-bold text-on-primary no-underline transition duration-100 hover:bg-primary-hover active:scale-[.97]">
-                {{ 'projects.demo' | translate }}
-            </a>
+            <app-button [href]="project.demo" [external]="true">{{ 'projects.demo' | translate }}</app-button>
             }
         </div>
         }

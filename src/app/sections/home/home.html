@@ -6,14 +6,8 @@
     <p class="mb-8 max-w-[58ch] text-lg text-muted">{{ 'home.lead' | translate }}</p>
 
     <div class="mb-10 flex flex-wrap gap-3">
-        <a routerLink="/projects"
-            class="border border-primary bg-primary px-5 py-3 text-sm font-bold text-on-primary no-underline transition duration-100 hover:bg-primary-hover active:scale-[.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-            {{ 'home.ctaProjects' | translate }}
-        </a>
-        <a routerLink="/competencies"
-            class="border border-foreground px-5 py-3 text-sm font-bold text-foreground no-underline transition duration-100 hover:bg-panel-hover active:scale-[.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-            {{ 'home.ctaSkills' | translate }}
-        </a>
+        <app-button routerLink="/projects">{{ 'home.ctaProjects' | translate }}</app-button>
+        <app-button routerLink="/competencies" variant="secondary">{{ 'home.ctaSkills' | translate }}</app-button>
     </div>
 
     <ul class="flex flex-wrap gap-x-4 gap-y-2" [attr.aria-label]="'home.stackLabel' | translate">
@@ -43,22 +37,13 @@
     <p class="mb-6 max-w-[58ch] text-muted">{{ 'home.contact.lead' | translate }}</p>
     <ul class="flex flex-wrap gap-3">
         <li>
-            <a [href]="'mailto:' + email"
-                class="inline-block border border-primary bg-primary px-5 py-3 text-sm font-bold text-on-primary no-underline transition duration-100 hover:bg-primary-hover active:scale-[.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                {{ 'home.contact.email' | translate }}
-            </a>
+            <app-button [href]="'mailto:' + email">{{ 'home.contact.email' | translate }}</app-button>
         </li>
         <li>
-            <a [href]="github" target="_blank" rel="noopener noreferrer"
-                class="inline-block border border-foreground px-5 py-3 text-sm font-bold text-foreground no-underline transition duration-100 hover:bg-panel-hover active:scale-[.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                GitHub
-            </a>
+            <app-button [href]="github" [external]="true" variant="secondary">GitHub</app-button>
         </li>
         <li>
-            <a [href]="linkedin" target="_blank" rel="noopener noreferrer"
-                class="inline-block border border-foreground px-5 py-3 text-sm font-bold text-foreground no-underline transition duration-100 hover:bg-panel-hover active:scale-[.97] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
-                LinkedIn
-            </a>
+            <app-button [href]="linkedin" [external]="true" variant="secondary">LinkedIn</app-button>
         </li>
     </ul>
 </section>
