@@ -26,7 +26,7 @@ export type CarouselFormat = 'landscape' | 'portrait';
           aria-roledescription="slide"
           [attr.aria-label]="i + 1 + ' / ' + images().length"
         >
-          <img [ngSrc]="'/images/' + src" fill [alt]="alt()" [class]="portrait() ? 'object-contain' : 'object-cover'" />
+          <img [ngSrc]="'images/' + src" fill [alt]="alt()" [class]="portrait() ? 'object-contain' : 'object-cover'" />
         </div>
       }
     </div>
