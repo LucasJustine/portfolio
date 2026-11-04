@@ -34,6 +34,7 @@ export const TECH_REGISTRY = {
     Kotlin: { slug: "kotlin", hex: "7f52ff", mono: "Kt", home: "https://kotlinlang.org" },
     Android: { slug: "android", hex: "34a853", mono: "An", home: "https://developer.android.com" },
     Tomcat: { slug: "apachetomcat", hex: "f8dc75", fg: "#1a1a1a", mono: "Tc", home: "https://tomcat.apache.org" },
+    C: { slug: "c", hex: "a8b9cc", mono: "C", home: "https://en.wikipedia.org/wiki/C_(programming_language)" },
 
     // Bases de données
     MySQL: { slug: "mysql", hex: "4479a1", mono: "My", home: "https://www.mysql.com" },

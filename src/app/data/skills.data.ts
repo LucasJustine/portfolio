@@ -28,6 +28,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
                 tag: 'cours',
             },
             {
+                name: 'C',
+                tag: 'cours',
+            },
+            {
                 name: 'Kotlin',
                 tag: 'cours',
             },
