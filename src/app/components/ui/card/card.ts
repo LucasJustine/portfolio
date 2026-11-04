@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
     host: {
         class: 'relative block h-full min-w-0 border border-border bg-background-alt p-6',
     },
-    styles: ':host { border-top: 3px solid var(--color-primary); }',
+    styles: ':host {}',
 })
 export class CardComponent {}
