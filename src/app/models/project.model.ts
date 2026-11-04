@@ -3,11 +3,11 @@ import { TechName } from "../lib/tech-registry";
 export interface Project {
     id: string;
     stack: TechName[];
+    /** Format AAAA-MM, sert au tri (plus récent en premier) */
+    date?: string;
     repo?: string;
     demo?: string;
-    imgSrc?: string;
-    imgWidth?: number;
-    imgHeight?: number;
+    images?: string[];
 }
 
 export const projectText = (

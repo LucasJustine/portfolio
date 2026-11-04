@@ -4,8 +4,8 @@
     </h1>
     <p class="mb-8 max-w-[60ch] text-muted">{{ 'projects.lead' | translate }}</p>
 
-    <div class="grid gap-x-4 gap-y-5 sm:grid-cols-2">
-        @for (project of projects; track project.id) {
+    <app-show-more [items]="projects" [limit]="4" gridClass="grid gap-x-4 gap-y-5 sm:grid-cols-2">
+        <ng-template #itemTemplate let-project>
         <app-card
             class="transition-[background-color,transform] duration-150 ease-out hover:bg-panel-hover active:scale-[.99] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-primary">
             <div class="flex h-full flex-col gap-3">
@@ -28,8 +28,8 @@
                 </ul>
             </div>
         </app-card>
-        }
-    </div>
+        </ng-template>
+    </app-show-more>
 </section>
 
 <app-modal [(open)]="modalOpen" [title]="selected() ? (projectText(selected()!, 'title') | translate) : ''"
@@ -38,10 +38,8 @@
 <ng-template #projectDetail let-project>
     @if (project) {
     <div class="p-6">
-        @if (project.imgSrc) {
-        <img [ngSrc]="'/images/' + project.imgSrc" [width]="project.imgWidth" [height]="project.imgHeight"
-            [alt]="projectText(project, 'title') | translate"
-            class="mb-6 h-auto w-full border border-border object-cover" />
+        @if (project.images?.length) {
+        <app-carousel class="mb-6" [images]="project.images" [alt]="projectText(project, 'title') | translate" />
         }
         <p class="mb-6 max-w-[65ch]">{{ projectText(project, 'body') | translate }}</p>
 

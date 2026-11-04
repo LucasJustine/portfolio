@@ -1,8 +1,8 @@
 <div [class]="gridClass()">
     @for (item of visibleItems(); track $index) {
-    @if (itemTemplate()) {
-    <ng-container *ngTemplateOutlet="itemTemplate(); context: { $implicit: item, index: $index }" />
-    }
+        @if (itemTemplate()) {
+            <ng-container *ngTemplateOutlet="itemTemplate(); context: { $implicit: item, index: $index }" />
+        }
     }
 </div>
 
@@ -17,13 +17,13 @@
             class="inline-flex items-center justify-center rounded-full bg-border px-1.5 py-0.2 text-[10px] text-muted transition-colors group-hover:bg-primary/10 group-hover:text-primary">
             +{{ hiddenCount() }}
         </span>
-        <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-y-0.5" viewBox="0 0 24 24"
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="6 9 12 15 18 9" />
         </svg>
         } @else {
         <span>{{ lessLabel() | translate }}</span>
-        <svg class="h-3.5 w-3.5 transition-transform duration-200 group-hover:-translate-y-0.5" viewBox="0 0 24 24"
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24"
             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15" />
         </svg>
