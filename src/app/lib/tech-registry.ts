@@ -31,6 +31,7 @@ export const TECH_REGISTRY = {
     Java: { slug: "openjdk", hex: "ed8b00", mono: "Jv", home: "https://openjdk.org" },
     "Spring Boot": { slug: "springboot", hex: "6db33f", mono: "Sb", home: "https://spring.io/projects/spring-boot" },
     REST: { slug: "openapiinitiative", hex: "6ba539", mono: "API", home: "https://www.openapis.org" },
+    "JWT & OAuth 2.0": { slug: "jsonwebtokens", hex: "d63aff", mono: "JWT", home: "https://oauth.net/2/" },
     Kotlin: { slug: "kotlin", hex: "7f52ff", mono: "Kt", home: "https://kotlinlang.org" },
     Android: { slug: "android", hex: "34a853", mono: "An", home: "https://developer.android.com" },
     Tomcat: { slug: "apachetomcat", hex: "f8dc75", fg: "#1a1a1a", mono: "Tc", home: "https://tomcat.apache.org" },
@@ -47,6 +48,7 @@ export const TECH_REGISTRY = {
 
     // Réseau, Web3 & Autres
     WebSocket: { slug: "", hex: "6188dd", mono: "Ws", home: "https://websocket.org" },
+    Nginx: { slug: "nginx", hex: "009639", mono: "Ngx", home: "https://www.nginx.com" },
 } satisfies Record<string, TechEntry>;
 
 export type TechName = keyof typeof TECH_REGISTRY;
