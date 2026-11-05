@@ -9,10 +9,11 @@ import { CarouselComponent } from '../../components/ui/carousel/carousel';
 import { ModalComponent } from '../../components/ui/modal/modal';
 import { ShowMoreComponent } from '../../components/ui/show-more/show-more';
 import { TechIconComponent } from '../../components/ui/tech-icon/tech-icon';
+import { TechStackComponent } from '../../components/ui/tech-stack/tech-stack';
 
 @Component({
     selector: 'app-projects',
-    imports: [TranslatePipe, ButtonComponent, CardComponent, CarouselComponent, ModalComponent, ShowMoreComponent, TechIconComponent],
+    imports: [TranslatePipe, ButtonComponent, CardComponent, CarouselComponent, ModalComponent, ShowMoreComponent, TechIconComponent, TechStackComponent],
     templateUrl: './projects.html',
     styles: ':host { display: block; }',
 })
