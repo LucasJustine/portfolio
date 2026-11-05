@@ -25,18 +25,18 @@
     "home": {
         "role": "Full-stack web developer",
         "title": "Lucas Justine",
-        "lead": "I build robust, accessible web applications, from the back end to the interface. Here is a selection of my projects and the technologies I use.",
+        "lead": "I build web applications, on the server side as well as the interface. Here you’ll find my projects and the technologies I work with.",
         "ctaProjects": "View my projects",
         "ctaSkills": "My skills",
         "stackLabel": "Main technologies",
         "about": {
             "title": "About",
-            "p1": "I am a web developer passionate about building clear interfaces and maintainable applications.",
-            "p2": "I keep learning, both in class and at work, and I like picking up new tools by building things."
+            "p1": "An engineer from ENSIIE, I specialize in back-end development while keeping the ability to work on the front end.",
+            "p2": "I keep learning the technologies most widely used in the industry to stay up to date: right now, I’m learning Spring Boot and Angular."
         },
         "contact": {
             "title": "Contact",
-            "lead": "A question, an opportunity, or just want to chat? Feel free to get in touch.",
+            "lead": "A question, a project idea or just want to chat? Write to me, I’m happy to reply.",
             "email": "Send me an email"
         }
     },
@@ -49,12 +49,12 @@
         "items": {
             "aca": {
                 "title": "Airfield pavement applications",
-                "details": "ACA is a public web application developed by STAC, dedicated to managing and assessing airfield pavements.",
-                "body": "Inventory management application built in PHP with Livewire. It tracks stock in and out, raises alerts when a threshold is reached and exports data for accounting."
+                "details": "ACA is an application dedicated to the management and calculation of airfield pavements",
+                "body": "Redesign of the application during my work-study placement at STAC. The application is developed with Laravel"
             },
             "booking": {
                 "title": "Room booking",
-                "details": "Room booking with a shared calendar. Conflicts are detected before confirmation and a reminder is sent by email.",
+                "details": "Room booking with a shared calendar",
                 "body": "Room booking with a shared calendar. Conflicts are detected before confirmation and a reminder is sent by email."
             },
             "portfolio": {
@@ -92,7 +92,7 @@
     "skills": {
         "badge": "Skills & Expertise",
         "title": "Tech Stack & Know-how",
-        "subtitle": "A complete overview of technologies, tools and methodologies I use to build robust and intuitive applications.",
+        "subtitle": "The languages, frameworks and tools I’ve used in class, at work and on my own projects.",
         "filterAll": "All categories",
         "filterLabel": "Filter by category",
         "searchPlaceholder": "Search a technology, tag...",
@@ -102,14 +102,14 @@
         "showLess": "Show less",
         "empty": {
             "title": "No skills found",
-            "description": "No technology matches your current filters or search query.",
+            "description": "No technology matches your current filters.",
             "reset": "Reset filters"
         },
         "tags": {
             "daily": "Daily",
-            "cours": "Coursework",
-            "appris": "Self-taught",
-            "pro": "Professional"
+            "course": "Coursework",
+            "selfTaught": "Self-taught",
+            "work": "Professional"
         },
         "categories": {
             "languages": {
@@ -118,11 +118,11 @@
             },
             "frontend": {
                 "name": "Frontend",
-                "description": "Dynamic and responsive client-side web interfaces"
+                "description": "Frameworks and libraries for reactive interfaces"
             },
             "backend": {
                 "name": "Backend",
-                "description": "Server applications development, business logic and APIs"
+                "description": "Server frameworks, application architecture and APIs"
             },
             "database": {
                 "name": "Databases & Cache",
