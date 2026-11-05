@@ -9,7 +9,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     styles: `
     dialog {
       opacity: 0;
-      transform: translateY(8px) scale(0.98);
+      transform: translateY(8px);
       transition:
         opacity 200ms ease,
         transform 250ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -21,7 +21,7 @@ import { TranslatePipe } from '@ngx-translate/core';
       transform: none;
       @starting-style {
         opacity: 0;
-        transform: translateY(8px) scale(0.98);
+        transform: translateY(8px);
       }
     }
     dialog::backdrop {
