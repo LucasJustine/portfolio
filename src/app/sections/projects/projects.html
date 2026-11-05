@@ -18,14 +18,7 @@
                 <p class="flex-1 text-[15px] text-muted line-clamp-3">
                     {{ projectText(project, 'details') | translate }}
                 </p>
-                <ul class="flex flex-wrap gap-x-3 gap-y-2 pt-1">
-                    @for (tech of project.stack; track tech) {
-                    <li class="flex items-center gap-1.5 text-[13px] text-muted">
-                        <app-tech-icon [name]="tech" [size]="20" aria-hidden="true" />
-                        {{ tech }}
-                    </li>
-                    }
-                </ul>
+                <app-tech-stack class="pt-1" [techs]="project.stack" />
             </div>
         </app-card>
         </ng-template>
