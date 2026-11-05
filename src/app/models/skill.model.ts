@@ -1,6 +1,6 @@
 import { TechName } from '../lib/tech-registry';
 
-export type SkillUsageTag = 'daily' | 'cours' | 'appris' | 'pro';
+export type SkillUsageTag = 'daily' | 'course' | 'selfTaught' | 'work';
 
 export interface Skill {
     name: TechName | string;

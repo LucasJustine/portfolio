@@ -8,32 +8,32 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         skills: [
             {
                 name: 'PHP',
-                tag: 'pro',
+                tag: 'work',
                 featured: true,
             },
             {
                 name: 'Java',
-                tag: 'cours',
+                tag: 'course',
             },
             {
                 name: 'TypeScript',
-                tag: 'appris',
+                tag: 'selfTaught',
             },
             {
                 name: 'JavaScript',
-                tag: 'cours',
+                tag: 'course',
             },
             {
                 name: 'HTML5 & CSS3',
-                tag: 'cours',
+                tag: 'course',
             },
             {
                 name: 'C',
-                tag: 'cours',
+                tag: 'course',
             },
             {
                 name: 'Kotlin',
-                tag: 'cours',
+                tag: 'course',
             },
         ],
     },
@@ -44,21 +44,25 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         skills: [
             {
                 name: 'Angular',
-                tag: 'appris',
+                tag: 'selfTaught',
                 featured: true,
             },
             {
                 name: 'Vue.js',
-                tag: 'appris',
+                tag: 'selfTaught',
             },
             {
                 name: 'Livewire',
-                tag: 'pro',
+                tag: 'work',
                 featured: true,
             },
             {
                 name: 'Tailwind CSS',
-                tag: 'appris',
+                tag: 'selfTaught',
+            },
+            {
+                name: 'DSFR',
+                tag: 'work',
             },
         ],
     },
@@ -69,16 +73,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         skills: [
             {
                 name: 'Laravel',
-                tag: 'pro',
+                tag: 'work',
                 featured: true,
             },
             {
                 name: 'Spring Boot',
-                tag: 'appris',
+                tag: 'selfTaught',
             },
             {
                 name: 'WebSocket',
-                tag: 'cours',
+                tag: 'course',
+            },
+            {
+                name: 'REST',
+                tag: 'course',
+            },
+            {
+                name: 'JWT & OAuth 2.0',
+                tag: 'selfTaught',
             },
 
         ],
@@ -90,12 +102,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         skills: [
             {
                 name: 'MySQL',
-                tag: 'cours',
+                tag: 'course',
                 featured: true,
             },
             {
                 name: 'Redis',
-                tag: 'cours',
+                tag: 'course',
             },
         ],
     },
@@ -110,7 +122,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
             },
             {
                 name: 'Docker',
-                tag: 'cours',
+                tag: 'course',
             },
         ],
     },
