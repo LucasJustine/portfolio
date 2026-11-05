@@ -25,25 +25,25 @@
     "home": {
         "role": "Développeur web full-stack",
         "title": "Lucas Justine",
-        "lead": "Je conçois des applications web robustes et accessibles, du back-end à l’interface. Voici une sélection de mes projets et des technologies que j’utilise.",
+        "lead": "Je développe des applications web, aussi bien côté serveur que côté interface. Ici, vous trouverez mes projets et les technologies avec lesquelles je travaille.",
         "ctaProjects": "Voir mes projets",
         "ctaSkills": "Mes compétences",
         "stackLabel": "Technologies principales",
         "about": {
             "title": "À propos",
-            "p1": "Je suis développeur web, passionné par la création d’interfaces claires et d’applications maintenables.",
-            "p2": "Je me forme en continu, en cours comme en entreprise, et j’aime apprendre de nouveaux outils par la pratique."
+            "p1": "Ingénieur issu de l’ENSIIE, je me spécialise dans le développement back-end tout en gardant la possibilité de faire du front-end.",
+            "p2": "Je continue à me former aux technologies les plus utilisées en entreprise pour rester à jour : en ce moment, j’apprends Spring Boot et Angular."
         },
         "contact": {
             "title": "Contact",
-            "lead": "Une question, une opportunité ou simplement envie d’échanger ? N’hésitez pas à m’écrire.",
+            "lead": "Une question, une idée de projet ou juste envie de discuter ? Écrivez-moi, je réponds avec plaisir.",
             "email": "M’envoyer un e-mail"
         }
     },
     "skills": {
         "badge": "Compétences & Expertise",
         "title": "Stack Technique & Savoir-faire",
-        "subtitle": "Un aperçu complet des technologies, outils et méthodologies que j'utilise pour concevoir des applications robustes et intuitives.",
+        "subtitle": "Les langages, frameworks et outils que j’ai utilisés en cours, en entreprise ou sur mes projets perso.",
         "filterAll": "Toutes les catégories",
         "filterLabel": "Filtrer par catégorie",
         "searchPlaceholder": "Rechercher une technologie, un tag...",
@@ -58,9 +58,9 @@
         },
         "tags": {
             "daily": "Au quotidien",
-            "cours": "En formation",
-            "appris": "Appris seul",
-            "pro": "En entreprise"
+            "course": "En formation",
+            "selfTaught": "Appris seul",
+            "work": "En entreprise"
         },
         "categories": {
             "languages": {
@@ -94,11 +94,11 @@
         "items": {
             "aca": {
                 "title": "Applications des chaussées aéronautiques",
-                "details": "ACA est une application web publique développée par le STAC, dédiée à la gestion et à l'évaluation des chaussées aéronautiques",
-                "body": "Application de "
+                "details": "ACA est une application dédiée à la gestion et au calcul des chaussées aéronautiques",
+                "body": "Refonte de l'application lors de mon alternance au STAC. L'application est développée en Laravel"
             },
             "booking": {
-                "details": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail.",
+                "details": "Réservation de salles avec un calendrier partagé",
                 "title": "Réservation de salles",
                 "body": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail."
             },
