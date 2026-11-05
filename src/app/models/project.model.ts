@@ -3,7 +3,7 @@ import { TechName } from "../lib/tech-registry";
 export interface Project {
     id: string;
     stack: TechName[];
-    /** Format AAAA-MM, sert au tri (plus récent en premier) */
+    /** Format AAAA-MM*/
     date?: string;
     repo?: string;
     demo?: string;
