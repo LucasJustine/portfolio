@@ -24,6 +24,10 @@ export class ProjectsComponent {
     protected readonly selected = signal<Project | null>(null);
     protected readonly modalOpen = signal(false);
 
+    protected year(date: string): string {
+        return date.slice(0, 4);
+    }
+
     protected open(project: Project): void {
         this.selected.set(project);
         this.modalOpen.set(true);

@@ -9,12 +9,17 @@
         <app-card
             class="transition-[background-color,transform] duration-150 ease-out hover:bg-panel-hover active:scale-[.99] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-primary">
             <div class="flex h-full flex-col gap-3">
-                <h2 class="text-[clamp(1.2rem,2.4vw,1.5rem)] leading-[1.1] font-bold tracking-tight">
-                    <button type="button" (click)="open(project)"
-                        class="cursor-pointer text-left after:absolute after:inset-0 focus-visible:outline-none">
-                        {{ projectText(project, 'title') | translate }}
-                    </button>
-                </h2>
+                <div class="flex items-baseline justify-between gap-3">
+                    <h2 class="text-[clamp(1.2rem,2.4vw,1.5rem)] leading-[1.1] font-bold tracking-tight">
+                        <button type="button" (click)="open(project)"
+                            class="cursor-pointer text-left after:absolute after:inset-0 focus-visible:outline-none">
+                            {{ projectText(project, 'title') | translate }}
+                        </button>
+                    </h2>
+                    @if (project.date) {
+                    <time class="shrink-0 text-xs font-medium text-muted" [attr.datetime]="project.date">{{ year(project.date) }}</time>
+                    }
+                </div>
                 <p class="flex-1 text-[15px] text-muted line-clamp-3">
                     {{ projectText(project, 'details') | translate }}
                 </p>
@@ -31,6 +36,9 @@
 <ng-template #projectDetail let-project>
     @if (project) {
     <div class="p-6">
+        @if (project.date) {
+            <time class="mb-4 block text-xs font-medium text-muted" [attr.datetime]="project.date">{{ year(project.date) }}</time>
+        }
         @if (project.images?.length) {
         <app-carousel class="mb-6" [images]="project.images" [format]="project.imageFormat ?? 'landscape'" [alt]="projectText(project, 'title') | translate" />
         }
