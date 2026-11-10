@@ -18,6 +18,7 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npx ng build --base-href=/portfolio/
+      - run: cp dist/portfolio/browser/index.html dist/portfolio/browser/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/portfolio/browser
