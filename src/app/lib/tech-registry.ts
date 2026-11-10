@@ -48,6 +48,7 @@ export const TECH_REGISTRY = {
 
     // Réseau, Web3 & Autres
     WebSocket: { slug: "", hex: "6188dd", mono: "Ws", home: "https://websocket.org" },
+    RabbitMQ: { slug: "rabbitmq", hex: "ff6600", mono: "Rb", home: "https://www.rabbitmq.com" },
     Nginx: { slug: "nginx", hex: "009639", mono: "Ngx", home: "https://www.nginx.com" },
 } satisfies Record<string, TechEntry>;
 

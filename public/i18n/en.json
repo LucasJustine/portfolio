@@ -5,7 +5,8 @@
         "projects": "Projects",
         "skills": "Skills",
         "contact": "Contact",
-        "label": "Breadcrumb"
+        "label": "Breadcrumb",
+        "notFound": "Page not found"
     },
     "header": {
         "homeLabel": "Back to home",
@@ -20,24 +21,41 @@
         "lightTheme": "Light",
         "openMenu": "Open menu",
         "close": "Close",
-        "menuLabel": "Navigation menu"
+        "menuLabel": "Navigation menu",
+        "education": "Education"
     },
     "home": {
         "role": "Full-stack web developer",
         "title": "Lucas Justine",
-        "lead": "I build web applications, on the server side as well as the interface. Here you’ll find my projects and the technologies I work with.",
+        "lead": "I build web applications end to end, with a preference for the back end. Here you’ll find my projects and the technologies I work with.",
         "ctaProjects": "View my projects",
         "ctaSkills": "My skills",
         "stackLabel": "Main technologies",
         "about": {
             "title": "About",
-            "p1": "An engineer from ENSIIE, I specialize in back-end development while keeping the ability to work on the front end.",
+            "p1": "An engineering graduate from ENSIIE, I’m a full-stack developer. I’m more comfortable on the back end (APIs, business logic, databases) than on the front end, but I can build a complete application, interface included.",
             "p2": "I keep learning the technologies most widely used in the industry to stay up to date: right now, I’m learning Spring Boot and Angular."
         },
         "contact": {
             "title": "Contact",
             "lead": "A question, a project idea or just want to chat? Write to me, I’m happy to reply.",
             "email": "Send me an email"
+        },
+        "ctaCv": "Download my résumé",
+        "education": {
+            "title": "Education",
+            "items": {
+                "ensiie": {
+                    "title": "Engineering degree in computer science",
+                    "school": "ENSIIE, Évry",
+                    "details": "Completed as a work-study program at STAC (DGAC) as a web developer."
+                },
+                "iut": {
+                    "title": "Two-year computer science program",
+                    "school": "IUT de Sénart-Fontainebleau",
+                    "details": "Internship at the French Civil Aviation Technical Service (DGAC) in 2023."
+                }
+            }
         }
     },
     "projects": {
@@ -59,8 +77,8 @@
             },
             "portfolio": {
                 "title": "Portfolio",
-                "details": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture.",
-                "body": "Bilingual portfolio built with Angular and Tailwind CSS, with light and dark themes and animations that follow the gesture."
+                "details": "Portfolio built with Angular and Tailwind CSS.",
+                "body": "The site you are on right now, built with Angular and Tailwind CSS."
             },
             "parcoursup": {
                 "title": "Parcoursup app",
@@ -84,8 +102,8 @@
             },
             "kickoff": {
                 "title": "Kickoff Matchup",
-                "details": "Project to organize football matches between friends",
-                "body": "Under development"
+                "details": "A platform in development for organizing matches between amateur football teams. The authentication foundation is in place.",
+                "body": "Kickoff Matchup is a platform in development for organizing matches between amateur football teams. The authentication foundation is in place. The back end is made up of Spring Boot microservices: a gateway acting as a BFF, a JWT authentication service, and an email service that consumes messages from RabbitMQ. Match organization between teams is the next step."
             }
         }
     },
@@ -140,5 +158,14 @@
     "carousel": {
         "previous": "Previous image",
         "next": "Next image"
+    },
+    "footer": {
+        "label": "Contact links",
+        "email": "Email"
+    },
+    "notFound": {
+        "title": "Page not found",
+        "lead": "This page doesn’t exist or has been moved.",
+        "back": "Back to home"
     }
 }

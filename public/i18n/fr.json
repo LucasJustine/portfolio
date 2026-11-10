@@ -5,7 +5,8 @@
         "projects": "Projets",
         "skills": "Compétences",
         "contact": "Contact",
-        "label": "Fil d'Ariane"
+        "label": "Fil d'Ariane",
+        "notFound": "Page introuvable"
     },
     "header": {
         "homeLabel": "Retour à l'accueil",
@@ -20,24 +21,41 @@
         "lightTheme": "Clair",
         "openMenu": "Ouvrir le menu",
         "close": "Fermer",
-        "menuLabel": "Menu de navigation"
+        "menuLabel": "Menu de navigation",
+        "education": "Parcours"
     },
     "home": {
         "role": "Développeur web full-stack",
         "title": "Lucas Justine",
-        "lead": "Je développe des applications web, aussi bien côté serveur que côté interface. Ici, vous trouverez mes projets et les technologies avec lesquelles je travaille.",
+        "lead": "Je développe des applications web de bout en bout, avec une préférence pour le back-end. Ici, vous trouverez mes projets et les technologies avec lesquelles je travaille.",
         "ctaProjects": "Voir mes projets",
         "ctaSkills": "Mes compétences",
         "stackLabel": "Technologies principales",
         "about": {
             "title": "À propos",
-            "p1": "Ingénieur issu de l’ENSIIE, je me spécialise dans le développement back-end tout en gardant la possibilité de faire du front-end.",
+            "p1": "Ingénieur diplômé de l’ENSIIE, je suis développeur full-stack. Je suis plus à l’aise côté back-end (API, logique métier, bases de données) que côté front-end, mais je sais construire une application complète, interface comprise.",
             "p2": "Je continue à me former aux technologies les plus utilisées en entreprise pour rester à jour : en ce moment, j’apprends Spring Boot et Angular."
         },
         "contact": {
             "title": "Contact",
             "lead": "Une question, une idée de projet ou juste envie de discuter ? Écrivez-moi, je réponds avec plaisir.",
             "email": "M’envoyer un e-mail"
+        },
+        "ctaCv": "Télécharger mon CV",
+        "education": {
+            "title": "Parcours scolaire",
+            "items": {
+                "ensiie": {
+                    "title": "Diplôme d’ingénieur en informatique",
+                    "school": "ENSIIE, Évry",
+                    "details": "Formation suivie en alternance au STAC (DGAC) comme développeur web."
+                },
+                "iut": {
+                    "title": "BUT Informatique (bac +2)",
+                    "school": "IUT de Sénart-Fontainebleau",
+                    "details": "Stage au Service technique de l’aviation civile (DGAC) en 2023."
+                }
+            }
         }
     },
     "skills": {
@@ -103,9 +121,9 @@
                 "body": "Réservation de salles avec un calendrier partagé. Les conflits sont détectés avant validation et un rappel est envoyé par e-mail."
             },
             "portfolio": {
-                "details": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste.",
+                "details": "Portfolio en angular et Tailwind CSS",
                 "title": "Portfolio",
-                "body": "Portfolio bilingue en Angular et Tailwind CSS, avec thème clair et sombre et des animations qui suivent le geste."
+                "body": "Site sur lequel vous vous trouvez actuellement, développé en Angular et Tailwind CSS"
             },
             "parcoursup": {
                 "title": "Application Parcoursup",
@@ -129,8 +147,8 @@
             },
             "kickoff": {
                 "title": "Kickoff Matchup",
-                "details": "Projet permettant de créer des rencontres de foot entre amis",
-                "body": "En cours de développement"
+                "details": "Plateforme en développement pour organiser des matchs entre équipes de football amateur. En cours de développement",
+                "body": "Kickoff Matchup est une plateforme en développement pour organiser des matchs entre équipes de football amateur. Le back repose sur des microservices Spring Boot : une passerelle qui joue le rôle de BFF, un service d’authentification par JWT et un service d’e-mails alimenté par RabbitMQ. L’organisation des matchs entre équipes est la prochaine étape."
             }
         }
     },
@@ -140,5 +158,14 @@
     "carousel": {
         "previous": "Image précédente",
         "next": "Image suivante"
+    },
+    "footer": {
+        "label": "Liens de contact",
+        "email": "E-mail"
+    },
+    "notFound": {
+        "title": "Page introuvable",
+        "lead": "Cette page n’existe pas ou a été déplacée.",
+        "back": "Retour à l’accueil"
     }
 }
