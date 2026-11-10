@@ -24,6 +24,7 @@ const VARIANTS: Record<ButtonVariant, string> = {
         [href]="url"
         [attr.target]="external() ? '_blank' : null"
         [attr.rel]="external() ? 'noopener noreferrer' : null"
+        [attr.download]="download() ? '' : null"
         [class]="classes()"
       ><ng-container *ngTemplateOutlet="content" /></a>
     } @else {
@@ -38,6 +39,7 @@ export class ButtonComponent {
   readonly routerLink = input<string | string[]>();
   readonly href = input<string>();
   readonly external = input(false);
+  readonly download = input(false);
   readonly type = input<'button' | 'submit' | 'reset'>('button');
 
   protected readonly classes = computed(() => `${BASE} ${VARIANTS[this.variant()]}`);

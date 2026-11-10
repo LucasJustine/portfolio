@@ -40,6 +40,7 @@ export class HeaderComponent {
 
     readonly links = [
         { label: 'header.about', route: '/', fragment: 'a-propos' },
+        { label: 'header.education', route: '/', fragment: 'parcours' },
         { label: 'header.projects', route: '/projects', fragment: undefined },
         { label: 'header.skills', route: '/competencies', fragment: undefined },
         { label: 'header.contact', route: '/', fragment: 'contact' },

@@ -8,6 +8,7 @@
     <div class="mb-10 flex flex-wrap gap-3">
         <app-button routerLink="/projects">{{ 'home.ctaProjects' | translate }}</app-button>
         <app-button routerLink="/competencies" variant="secondary">{{ 'home.ctaSkills' | translate }}</app-button>
+        <app-button [href]="contact.cv" [download]="true" variant="secondary">{{ 'home.ctaCv' | translate }}</app-button>
     </div>
 
     <ul class="flex flex-wrap gap-x-4 gap-y-2" [attr.aria-label]="'home.stackLabel' | translate">
@@ -30,6 +31,22 @@
     </div>
 </section>
 
+<section id="parcours" class="scroll-mt-8 border-t border-border py-12 sm:py-16" aria-labelledby="education-title">
+    <h2 id="education-title" class="mb-6 text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] font-bold tracking-tight">
+        {{ 'home.education.title' | translate }}
+    </h2>
+    <ol class="max-w-[65ch] space-y-6">
+        @for (item of education; track item.id) {
+        <li class="border-l-2 border-primary pl-4">
+            <p class="mb-1 text-sm font-semibold text-primary">{{ item.period }}</p>
+            <h3 class="text-lg font-bold">{{ 'home.education.items.' + item.id + '.title' | translate }}</h3>
+            <p class="text-muted">{{ 'home.education.items.' + item.id + '.school' | translate }}</p>
+            <p class="mt-2">{{ 'home.education.items.' + item.id + '.details' | translate }}</p>
+        </li>
+        }
+    </ol>
+</section>
+
 <section id="contact" class="scroll-mt-8 border-t border-border py-12 sm:py-16" aria-labelledby="contact-title">
     <h2 id="contact-title" class="mb-4 text-[clamp(1.5rem,3vw,2rem)] leading-[1.1] font-bold tracking-tight">
         {{ 'home.contact.title' | translate }}
@@ -37,13 +54,13 @@
     <p class="mb-6 max-w-[58ch] text-muted">{{ 'home.contact.lead' | translate }}</p>
     <ul class="flex flex-wrap gap-3">
         <li>
-            <app-button [href]="'mailto:' + email">{{ 'home.contact.email' | translate }}</app-button>
+            <app-button [href]="'mailto:' + contact.email">{{ 'home.contact.email' | translate }}</app-button>
         </li>
         <li>
-            <app-button [href]="github" [external]="true" variant="secondary">GitHub</app-button>
+            <app-button [href]="contact.github" [external]="true" variant="secondary">GitHub</app-button>
         </li>
         <li>
-            <app-button [href]="linkedin" [external]="true" variant="secondary">LinkedIn</app-button>
+            <app-button [href]="contact.linkedin" [external]="true" variant="secondary">LinkedIn</app-button>
         </li>
     </ul>
 </section>
